@@ -1,7 +1,8 @@
 package br.com.caelum.leilao.teste;
 
-import org.junit.Test;
 import org.junit.Assert;
+import org.junit.Test;
+
 import br.com.caelum.leilao.dominio.Lance;
 import br.com.caelum.leilao.dominio.Leilao;
 import br.com.caelum.leilao.dominio.Usuario;
@@ -11,7 +12,7 @@ public class TesteDoAvaliador {
 	
 	@Test
 	public void deveEntenderLancesEmOrdemCrescente() {
-		//parte 1: cenário
+		//parte 1: cenï¿½rio
 		Usuario joao = new Usuario ("Joao");
 		Usuario jose = new Usuario ("Jose");
 		Usuario maria = new Usuario ("Maria");
@@ -22,11 +23,11 @@ public class TesteDoAvaliador {
 		leilao.propoe(new Lance (jose, 300.0));
 		leilao.propoe(new Lance (maria, 400.0));
 		
-		//parte 2: ação
+		//parte 2: aï¿½ï¿½o
 		Avaliador leiloeiro = new Avaliador();
 		leiloeiro.avalia(leilao);
 		
-		//parte 3: validação
+		//parte 3: validaï¿½ï¿½o
 		double maiorEsperado = 400;
 		double menorEsperado = 250;
 		
